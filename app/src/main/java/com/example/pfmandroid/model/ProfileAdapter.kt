@@ -8,11 +8,11 @@ import com.example.pfmandroid.R
 import kotlinx.android.synthetic.main.card_details.view.*
 
 class ProfileAdapter(private val onClicked: (Profile) -> Unit): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    private lateinit var items: List<Profile>
+    private var items: List<Profile> = listOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return ProfileViewHolder (
-            LayoutInflater.from(parent.context).inflate(R.layout.fragment_home, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.card_details, parent, false)
         )
 
     }
